@@ -81,7 +81,7 @@ function Contact() {
     <div id='contact' className={`contact ${isVisible ? 'visible' : ''}`} ref={currentSectionRef}>
       <h2>Contact</h2>
 
-      <form action="#" method="post" className='contact__form'>
+      <form action="mailto:armand.bredean@gmail.com" method="post" enctype="text/plain" className='contact__form'>
         <div className='contact__form__container name-email'>
           <div className='contact__form__container'>
             <label htmlFor="name" className='contact__form__name'>Name</label>
@@ -119,7 +119,6 @@ function Contact() {
             onClick={() => setIsActive((prevState) => ({ ...prevState, message: true }))}
             ref={messageInputRef}
           ></textarea>
-         
         </div>
 
         <input type="submit" value="Submit" className='contact__form__submit' />

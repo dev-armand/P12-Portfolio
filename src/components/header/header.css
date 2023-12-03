@@ -16,7 +16,6 @@
   display: none;
 }
 .nav__left-section h2 {
-  margin: 1rem;
   color: #5327c1;
 }
 .nav__center-section {
@@ -73,7 +72,7 @@
 .nav__center-section__home-icon:hover {
   color: rgb(240, 240, 240);
   cursor: pointer;
-  background-color: #5327c1;
+  background: linear-gradient(#5327c1, white);
 }
 .nav__right-section {
   display: flex;
@@ -116,17 +115,16 @@
   }
 }
 @media (min-width: 768px) {
+  .nav__center-section__home-icon {
+    left: 200px;
+  }
   .nav__center-section__navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
     width: 520px;
   }
-  .nav__center-section__navbar p {
-    font-size: 20px;
-    margin-right: 2rem;
+  .nav__center-section__navbar a {
+    font-size: 22px;
     margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 @media (min-width: 1024px) {
@@ -169,10 +167,12 @@
   .nav__right-section__Github:hover {
     color: rgb(240, 240, 240);
     cursor: pointer;
-    background-color: #5327c1;
+    background: linear-gradient(#5327c1, white);
   }
   .nav__center-section__navbar {
     margin-top: 1rem;
+    width: 500px;
+    padding: 4px;
   }
   .nav__center-section__navbar a {
     font-size: 22px;
@@ -180,19 +180,71 @@
     margin-right: 2rem;
   }
   .nav__center-section__home-icon {
-    left: -500px;
-    top: -15px;
+    margin-left: 2.2rem;
+    margin-top: 3rem;
   }
   .nav__left-section {
     display: block;
     width: 310px;
     display: flex;
-    justify-content: flex-end;
+    align-items: flex-start;
   }
   .nav__left-section h2 {
-    margin: 1rem;
-    margin-top: 2rem;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem;
+    border-radius: 30px;
+    background-color: #030014;
+    border: solid;
+    border-width: 3px;
+    border-color: white;
     text-shadow: rgb(240, 240, 240) 1px 0 10px;
+    box-shadow: 1px 1px 10px 10px #5327c1;
+    padding: 1rem;
+    margin: 0.75rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    color: white;
+    font-size: 20px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    background: linear-gradient(#5327c1, white);
+  }
+  .nav__left-section h2:hover {
+    background: linear-gradient(#5327c1, white);
+    cursor: pointer;
+  }
+  .nav__left-section h2:hover {
+    background: linear-gradient(white, #5327c1);
+  }
+  .nav__left-section__name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem;
+    border-radius: 30px;
+    background-color: #030014;
+    border: solid;
+    border-width: 3px;
+    border-color: white;
+    text-shadow: rgb(240, 240, 240) 1px 0 10px;
+    box-shadow: 1px 1px 10px 10px #5327c1;
+    padding: 1rem;
+    margin: 0.75rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    color: white;
+    height: 6px;
+    background: linear-gradient(#5327c1, white);
+  }
+  .nav__left-section__name-container:hover {
+    background: linear-gradient(#5327c1, white);
+    cursor: pointer;
   }
 }/*# sourceMappingURL=header.css.map */

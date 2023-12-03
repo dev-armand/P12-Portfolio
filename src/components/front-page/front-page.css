@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .front-page {
   display: flex;
   justify-content: center;
@@ -59,9 +60,35 @@
 .front-page button:hover {
   color: rgb(240, 240, 240);
   cursor: pointer;
-  background-color: #5327c1;
+  background: linear-gradient(#5327c1, white);
 }
 
+@media (min-width: 768px) {
+  .front-page {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 5rem;
+    margin-top: 1çrem;
+  }
+  .front-page h1 {
+    font-size: 60px;
+  }
+  .front-page h2 {
+    font-size: 25px;
+    margin-top: 3rem;
+  }
+  .front-page h3 {
+    margin-left: 1rem;
+    font-size: 25px;
+    margin-top: 3rem;
+  }
+  .front-page button {
+    width: 250px;
+    height: 50px;
+    margin-top: 5rem;
+    margin-left: 10rem;
+  }
+}
 @media (min-width: 1024px) {
   .front-page {
     display: flex;
@@ -81,7 +108,7 @@
     margin-top: 1rem;
   }
   .front-page button {
-    width: 300px;
+    width: 250px;
     height: 60px;
     margin-top: 2rem;
   }

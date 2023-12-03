@@ -19,6 +19,11 @@
   background-color: #5327c1;
 }
 
+@media (min-width: 768px) {
+  .video-container__video {
+    top: -430px;
+  }
+}
 @media (min-width: 1024px) {
   .video-container__video {
     top: -250px;

@@ -58,6 +58,11 @@
   color: #5327c1;
 }
 
+@media (min-width: 768px) {
+  .about h2 {
+    font-size: 40px;
+  }
+}
 @media (min-width: 1024px) {
   .about {
     margin-top: 6rem;

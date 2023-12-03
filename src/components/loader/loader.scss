@@ -5,7 +5,7 @@
 .loader {
   @include centerRow;
     position: fixed;
-    margin-top: -15rem;
+    margin-top: -20rem;
     margin-left: -8px;
     
     background: linear-gradient($secondary-color, $main-color);
@@ -15,6 +15,7 @@
     gap: 9px;
     font-size: 3.2rem;
     animation: load 2s forwards;
+    text-shadow: $tertiary-color 1px 0 10px;
     color: $white;
     & .bar1, .bar2, .bar3 {
       height: 50px;
@@ -40,4 +41,10 @@
   0% {transform: scale(1); opacity: 1;}
   50% {transform: scale(1); opacity: 1;}
   100% {transform: scale(1); opacity: 0; visibility: hidden;}
+}
+
+@include forDesktop {
+  .loader {
+    margin-top: -15rem;
+  }
 }

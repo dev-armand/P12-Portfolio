@@ -53,4 +53,20 @@
     height: 100px;
     width: 120px;
   }
+}
+@media (min-width: 768px) {
+  .skills-section h2 {
+    font-size: 40px;
+  }
+  .skills-section h3 {
+    font-size: 25px;
+  }
+  .skills-section__container {
+    width: 620px;
+    margin-bottom: 5rem;
+  }
+  .skills-section__container__img {
+    height: 80px;
+    width: 100px;
+  }
 }/*# sourceMappingURL=skills.css.map */

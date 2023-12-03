@@ -140,14 +140,28 @@
 .contact__form__submit:hover {
   color: rgb(240, 240, 240);
   cursor: pointer;
-  background-color: #5327c1;
+  background: linear-gradient(#5327c1, white);
 }
 
+@media (min-width: 768px) {
+  .contact h2 {
+    font-size: 40px;
+  }
+  .contact__form__name-input {
+    width: 300px;
+  }
+  .contact__form__email-input {
+    width: 300px;
+  }
+  .contact__form__message-text-area {
+    width: 450px;
+  }
+}
 @media (min-width: 1024px) {
   .contact {
     align-items: flex-start;
     margin-left: 2rem;
-    height: 350px;
+    height: 360px;
     width: 1200px;
   }
   .contact h2 {
@@ -162,12 +176,13 @@
     flex-direction: row;
     align-items: flex-start;
     margin-top: -4rem;
+    width: 135100% 0px;
   }
   .contact__form__name {
     margin-top: 1rem;
   }
   .contact__form__message-text-area {
-    width: 800px;
+    width: 600px;
     height: 180px;
   }
   .contact__form .name-email {

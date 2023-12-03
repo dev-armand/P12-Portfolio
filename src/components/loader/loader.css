@@ -1,0 +1,66 @@
+/****************************  LOADER ANIMATION */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  margin-top: -20rem;
+  margin-left: -8px;
+  background: linear-gradient(#030014, #5327c1);
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  gap: 9px;
+  font-size: 3.2rem;
+  animation: load 2s forwards;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  color: white;
+}
+.loader .bar1, .loader .bar2, .loader .bar3 {
+  height: 50px;
+  width: 20px;
+  background-color: white;
+  animation: grow 1.5s infinite;
+}
+.loader .bar2 {
+  animation-delay: 0.3s;
+}
+.loader .bar3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+@keyframes load {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@media (min-width: 1024px) {
+  .loader {
+    margin-top: -15rem;
+  }
+}/*# sourceMappingURL=loader.css.map */

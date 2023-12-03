@@ -38,7 +38,7 @@
   border-color: #5327c1;
   background-color: #030014;
   position: relative;
-  margin-top: 10rem;
+  margin-top: 4rem;
 }
 .projects__container__left-section:hover {
   background-color: #030014;
@@ -217,6 +217,14 @@
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  .projects h2 {
+    font-size: 40px;
+  }
+  .projects__container__left-section {
+    margin-top: 1rem;
+  }
+}
 @media (min-width: 1024px) {
   .projects {
     height: 700px;
