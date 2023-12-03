@@ -1,0 +1,187 @@
+@import '../../SASS/utilities/variables.scss';
+@import '../../SASS/utilities/mixins.scss';
+
+.nav {
+  @include centerColumn;
+  height: 6rem;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  backdrop-filter: blur(10px);
+  top: 0;
+  margin-left: -8px;
+
+  &__left-section {
+    display: none;
+    & h2 {
+      color: $main-color;
+      }
+  }
+
+  &__center-section {
+  position: relative;
+
+    &__navbar {
+      @include spaceBetween;
+      height: 3rem;
+      border-radius: 30px;
+      background-color: $secondary-color;
+      border: solid;
+      border-width: 3px;
+      border-color: $white;
+      text-shadow: $tertiary-color 1px 0 10px;
+      box-shadow: 1px 1px 10px 10px $main-color;
+      width: 360px;
+      & a {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-family: $main-font;
+        font-size: 18px;
+        color: $white;
+        font-weight: bold;
+        &:hover {
+          color: $tertiary-color;
+          cursor: pointer;
+          padding-bottom: 5px;
+          font-size: 22px
+        }
+      }
+    }
+    
+    &__home-icon {
+      position: absolute;
+      left: 129px;
+      top: 30px;
+      @include icon;
+      width: 25px;
+    }
+  }
+
+    &__right-section {
+      @include centerRow;
+      display: none;
+      &__github{
+        margin: 1rem;
+        font-size: 24px;
+        color: $main-color;
+        font-weight: bold;
+        box-shadow: 1px 1px 10px 5px $main-color;
+        border-radius: 30px;
+        border-color: $white;
+        border: solid;
+        border-width: 3px;
+        padding: 5px;
+        &:hover {
+          color: $tertiary-color;
+          cursor: pointer;
+          opacity: 1;
+          font-size: 26px;
+        }
+      }
+    }
+}
+
+@include forLargeMobile {
+  .nav {
+    &__center-section {
+      &__navbar {
+        @include spaceBetween;
+        width: 400px;
+        & p {
+          font-size: 18px;
+          margin-right: 1rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+
+  @include forTablet {
+  .nav {
+    &__center-section {
+
+      &__home-icon {
+        left: 200px;
+      }
+
+      &__navbar {
+        width: 520px;
+        & a {
+          font-size: 22px;
+          margin-left: 2rem;
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}
+  @include forDesktop {
+    .nav{
+      @include spaceBetween;
+      &__right-section {
+        width: 310px;
+        display: flex;
+        justify-content: flex-end;
+
+        &__Github {
+          @include Bigbutton;
+          height: 35px;
+          width: 35px;
+          margin: 1rem;
+          border-radius: 3rem;
+          padding: 3px;
+          margin-right: 2rem;
+        }
+      }
+
+      &__center-section {
+
+        &__navbar {
+          margin-top: 1rem ;
+          width: 500px;
+          padding: 4px;
+          
+          & a {
+            font-size: 22px;
+            margin-left: 2rem;
+            margin-right: 2rem;
+          }
+        }
+
+        &__home-icon {
+          margin-left: 2.2rem;
+          margin-top: 3rem;
+        }
+      }
+          
+      &__left-section {
+        display: block;
+        width: 310px;
+        display: flex;
+        align-items: flex-start;
+        
+        & h2 {
+          @include button;
+          font-size: 20px;
+          padding: 2px;
+          padding-left: 10px;
+          padding-right: 10px;
+          margin-left: 0;
+          margin-right: 0;
+          background: linear-gradient($main-color, $white);
+          &:hover {
+            background: linear-gradient($white, $main-color);
+          }
+          }
+        
+          &__name-container {
+            @include button;
+            height: 6px;
+            background: linear-gradient($main-color, $white);
+          }
+      }
+    }
+  }
+

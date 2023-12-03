@@ -1,0 +1,243 @@
+.projects {
+  height: 2000px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.projects.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.projects h2 {
+  color: white;
+  font-size: 30px;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.projects__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.projects__container__left-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 5px;
+  height: 530px;
+  width: 300px;
+  border: solid;
+  border-width: 3px;
+  border-color: #5327c1;
+  background-color: #030014;
+  position: relative;
+  margin-top: 10rem;
+}
+.projects__container__left-section:hover {
+  background-color: #030014;
+  border: solid;
+  border-width: 3px;
+  border-color: white;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  box-shadow: 1px 1px 10px 10px #5327c1;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+.projects__container__left-section__img {
+  height: 270px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.projects__container__left-section h3 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.projects__container__left-section p {
+  color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.projects__container__left-section .gitHub {
+  height: 30px;
+  width: 30px;
+  margin: 1rem;
+  border-radius: 3rem;
+  padding: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 120px;
+}
+.projects__container__left-section .gitHub:hover {
+  background-color: #030014;
+  border: solid;
+  border-width: 3px;
+  border-color: white;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  box-shadow: 1px 1px 10px 10px #5327c1;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+.projects__container__center-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 5px;
+  height: 530px;
+  width: 300px;
+  border: solid;
+  border-width: 3px;
+  border-color: #5327c1;
+  background-color: #030014;
+  position: relative;
+  margin-top: 10rem;
+}
+.projects__container__center-section:hover {
+  background-color: #030014;
+  border: solid;
+  border-width: 3px;
+  border-color: white;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  box-shadow: 1px 1px 10px 10px #5327c1;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+.projects__container__center-section__img {
+  height: 270px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.projects__container__center-section h3 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.projects__container__center-section p {
+  color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.projects__container__center-section .gitHub {
+  height: 30px;
+  width: 30px;
+  margin: 1rem;
+  border-radius: 3rem;
+  padding: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 120px;
+}
+.projects__container__center-section .gitHub:hover {
+  background-color: #030014;
+  border: solid;
+  border-width: 3px;
+  border-color: white;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  box-shadow: 1px 1px 10px 10px #5327c1;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+.projects__container__right-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 5px;
+  height: 530px;
+  width: 300px;
+  border: solid;
+  border-width: 3px;
+  border-color: #5327c1;
+  background-color: #030014;
+  position: relative;
+  margin-top: 10rem;
+}
+.projects__container__right-section:hover {
+  background-color: #030014;
+  border: solid;
+  border-width: 3px;
+  border-color: white;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  box-shadow: 1px 1px 10px 10px #5327c1;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+.projects__container__right-section__img {
+  height: 270px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.projects__container__right-section h3 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.projects__container__right-section p {
+  color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.projects__container__right-section .gitHub {
+  height: 30px;
+  width: 30px;
+  margin: 1rem;
+  border-radius: 3rem;
+  padding: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 120px;
+}
+.projects__container__right-section .gitHub:hover {
+  background-color: #030014;
+  border: solid;
+  border-width: 3px;
+  border-color: white;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  box-shadow: 1px 1px 10px 10px #5327c1;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .projects {
+    height: 700px;
+  }
+  .projects h2 {
+    font-size: 40px;
+  }
+  .projects__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .projects__container__left-section {
+    margin-top: 3rem;
+  }
+  .projects__container__center-section {
+    margin-top: 3rem;
+  }
+  .projects__container__right-section {
+    margin-top: 3rem;
+  }
+}/*# sourceMappingURL=projects.css.map */

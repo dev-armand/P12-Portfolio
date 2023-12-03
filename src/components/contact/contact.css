@@ -1,0 +1,183 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 700px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.contact.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.contact h2 {
+  color: white;
+  font-size: 30px;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+}
+.contact__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 550px;
+}
+.contact__form__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact__form__name {
+  color: white;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  font-size: 25px;
+  margin-top: 2rem;
+}
+.contact__form__name-input {
+  width: 250px;
+  border: solid;
+  border-width: 3px;
+  border-color: #5327c1;
+  border-radius: 5px;
+  height: 2rem;
+  font-size: 16px;
+  margin-top: 5px;
+  background: #030014;
+  color: white;
+}
+.contact__form__name-input.active {
+  background-color: #030014;
+  border: solid;
+  border-width: 3px;
+  border-color: white;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  box-shadow: 1px 1px 10px 10px #5327c1;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+.contact__form__email {
+  color: white;
+  margin-top: 1rem;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  font-size: 25px;
+}
+.contact__form__email-input {
+  width: 250px;
+  border: solid;
+  border-width: 3px;
+  border-color: #5327c1;
+  border-radius: 5px;
+  height: 2rem;
+  font-size: 16px;
+  margin-top: 5px;
+  background: #030014;
+  color: white;
+}
+.contact__form__email-input.active {
+  background-color: #030014;
+  border: solid;
+  border-width: 3px;
+  border-color: white;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  box-shadow: 1px 1px 10px 10px #5327c1;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+.contact__form__message {
+  color: white;
+  margin-top: 1rem;
+  font-size: 25px;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+}
+.contact__form__message-text-area {
+  margin-top: 5px;
+  width: 300px;
+  border: solid;
+  border-width: 3px;
+  border-color: #5327c1;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #030014;
+  color: white;
+}
+.contact__form__message-text-area.active {
+  background-color: #030014;
+  border: solid;
+  border-width: 3px;
+  border-color: white;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  box-shadow: 1px 1px 10px 10px #5327c1;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+.contact__form__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 3rem;
+  border-radius: 30px;
+  background-color: #030014;
+  border: solid;
+  border-width: 3px;
+  border-color: white;
+  text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  box-shadow: 1px 1px 10px 10px #5327c1;
+  padding: 1rem;
+  margin: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.contact__form__submit:hover {
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+  background-color: #5327c1;
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    align-items: flex-start;
+    margin-left: 2rem;
+    height: 350px;
+    width: 1200px;
+  }
+  .contact h2 {
+    font-size: 80px;
+    margin-left: 5rem;
+    margin-top: 1rem;
+  }
+  .contact__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: -4rem;
+  }
+  .contact__form__name {
+    margin-top: 1rem;
+  }
+  .contact__form__message-text-area {
+    width: 800px;
+    height: 180px;
+  }
+  .contact__form .name-email {
+    margin-left: 5rem;
+  }
+  .contact__form .message-submit {
+    margin-left: 120px;
+  }
+  .contact__form__submit {
+    margin-top: 7rem;
+    margin-left: 5rem;
+  }
+}/*# sourceMappingURL=contact.css.map */

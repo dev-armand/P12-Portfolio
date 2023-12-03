@@ -1,0 +1,13 @@
+@import '../../SASS/utilities/variables.scss';
+@import '../../SASS/utilities/mixins.scss';
+
+.footer {
+  height: 10rem;
+  background: $secondary-color;
+  color: $main-color;
+  @include centerRow;
+  position: relative;
+  z-index: 3;
+  margin: -8px;
+  margin-bottom: -8px;
+}
