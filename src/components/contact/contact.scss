@@ -36,11 +36,12 @@
       height: 2rem;
       font-size: 16px;
       margin-top: 5px;
-      background: $secondary-color;
+      background: $dark-purple-color;
       color: $white;
       
       &.active{
         @include glow-effect;
+        background: $dark-purple-color;
       }
     }
 
@@ -57,11 +58,12 @@
       height: 2rem;
       font-size: 16px;
       margin-top: 5px;
-      background: $secondary-color;
+      background: $dark-purple-color;
       color: $white;
 
       &.active{
         @include glow-effect;
+        background: $dark-purple-color;
       }
     }
 
@@ -77,11 +79,12 @@
       width: 300px;
       @include border;
       font-size: 16px;
-      background: $secondary-color;
+      background: $dark-purple-color;
       color: $white;
 
       &.active{
         @include glow-effect;
+        background: $dark-purple-color;
       }
     }
     
@@ -138,7 +141,7 @@
       @include centerRow;
       align-items: flex-start;
       margin-top: -4rem;
-      width: 135100%0px;
+      width: 1350px;
 
       &__name {
         margin-top: 1rem;

@@ -43,15 +43,20 @@
       margin-left: 3rem;
       margin-right: 3rem;
       font-size: 20px;
-      background-color: $secondary-color;
+      background-color: $dark-purple-color;
       padding: 1rem;
       border-radius: 5px;
       border: solid;
       border-width: 3px;
-      border-color: $main-color;
+      border-color: $light-purple;
+      color: $white;
+      // filter: brightness(2);
+      line-height: 1.4;
 
       &__span {
-        color: $main-color;
+        color: $light-purple;
+        font-size: 22px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       }
     }
   }

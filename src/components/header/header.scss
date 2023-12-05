@@ -169,11 +169,12 @@
           padding-left: 10px;
           padding-right: 10px;
           margin-left: 0;
+          text-shadow: 0 0 20px $secondary-color;
           margin-right: 0;
-          background: linear-gradient($main-color, $white);
-          &:hover {
-            background: linear-gradient($white, $main-color);
-          }
+          background: linear-gradient($main-color 10%, $white);
+            &:hover {
+              background: linear-gradient($white, $main-color);
+            }
           }
         
           &__name-container {

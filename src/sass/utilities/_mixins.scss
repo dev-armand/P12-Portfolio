@@ -89,7 +89,8 @@
     &:hover {
       color: $tertiary-color;
       cursor: pointer;
-      background: linear-gradient($main-color, $white);
+      background: linear-gradient($main-color 10%, $white);
+      text-shadow: 1px 0 20px $secondary-color;
     }
 }
 
@@ -122,13 +123,14 @@
   @include glow-effect-hover;
   justify-content: flex-start;
   border-radius: 5px;
-  height: 530px;
+  height: 580px;
   width: 300px;
   border: solid;
   border-width: 3px;
-  border-color: $main-color;
-  background-color: $secondary-color;
+  border-color: $light-purple;
+  background-color: $dark-purple-color;
   position: relative;
+  
 
   &__img {
     height: 270px;
@@ -148,6 +150,7 @@
     color: $white;
     margin-left: 1rem;
     margin-right: 1rem;
+    font-size: 18px;
   }
 
   & .gitHub {
@@ -161,12 +164,16 @@
     bottom: -10px;
     left: 120px;
   }
+
+  &:hover {
+    background-color: $dark-purple-color;
+  }
 }
 
 @mixin border {
   border: solid;
   border-width: 3px;
-  border-color: $main-color;
+  border-color: $light-purple;
   border-radius: 5px;
 }
 
@@ -184,7 +191,7 @@
     &:hover {
       color: $tertiary-color;
       cursor: pointer;
-      background: linear-gradient($main-color, $white);
+      background: linear-gradient($main-color 10%, $white);
     }
 }
 
