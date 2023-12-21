@@ -171,9 +171,9 @@
           margin-left: 0;
           text-shadow: 0 0 20px $secondary-color;
           margin-right: 0;
-          background: linear-gradient($main-color 10%, $white);
+          background: linear-gradient($main-color 10%, $light-purple);
             &:hover {
-              background: linear-gradient($white, $main-color);
+              background: linear-gradient($light-purple, $main-color);
             }
           }
         
