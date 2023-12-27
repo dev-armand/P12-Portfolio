@@ -1,30 +1,12 @@
+// This is the "Contact" section to send a message with your name and email
+
 import React, { useState, useRef, useEffect } from 'react';
 import './contact.scss';
-
+import useScrollVisibility from '../scroll/scroll';
 
 function Contact() {
-  // animation effect appear/disappear
-  const [isVisible, setIsVisible] = useState(false);
-  const currentSectionRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const { top, bottom } = currentSectionRef.current.getBoundingClientRect();
-      const thresholdAppear = window.innerHeight * 0.4;
-      const thresholdDisappear = window.innerHeight * 0.5; // Adjust this value for disappearance
-
-      if (top < thresholdAppear && bottom > thresholdDisappear) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const thresholds = [window.innerHeight * 0.4, window.innerHeight * 0.5];
+  const [currentSectionRef, isVisible] = useScrollVisibility(thresholds);
 
   // glowing effect on click of the input
   const [isActive, setIsActive] = useState({
@@ -77,17 +59,25 @@ function Contact() {
     };
   }, []);
 
+  const clearFields = () => {
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+  };
+
+
   return (
     <div id='contact' className={`contact ${isVisible ? 'visible' : ''}`} ref={currentSectionRef}>
       <h2>Contact</h2>
 
-      <form action="mailto:armand.bredean@gmail.com" method="post" enctype="text/plain" className='contact__form'>
+      <form action="https://formspree.io/f/xdoqnlqv" method="POST" enctype="multipart/form-data" className='contact__form'>
         <div className='contact__form__container name-email'>
           <div className='contact__form__container'>
             <label htmlFor="name" className='contact__form__name'>Name</label>
             <input
               type="text"
               name="name"
+              required
               id="name"
               className={`contact__form__name-input ${isActive.name ? 'active' : ''}`}
               onClick={() => setIsActive((prevState) => ({ ...prevState, name: true }))}
@@ -100,6 +90,7 @@ function Contact() {
             <input
               type="email"
               name="email"
+              required
               id="email"
               className={`contact__form__email-input ${isActive.email ? 'active' : ''}`}
               onClick={() => setIsActive((prevState) => ({ ...prevState, email: true }))}
@@ -120,9 +111,7 @@ function Contact() {
             ref={messageInputRef}
           ></textarea>
         </div>
-
-        <input type="submit" value="Submit" className='contact__form__submit' />
-
+        <input type="submit" value="Submit" className='contact__form__submit'/>
       </form>
     </div>
   );

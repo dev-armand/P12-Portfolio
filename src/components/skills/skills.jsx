@@ -1,3 +1,5 @@
+// This is the "Skills section" it will show the differents technologies that I use
+
 import './skills.scss';
 import PhotoCSS from '../../assets/CSS3_logo_and_wordmark.svg.png';
 import PhotoHTML from '../../assets/HTML5_logo_and_wordmark.svg.png';
@@ -5,30 +7,12 @@ import PhotoReact from '../../assets/React-icon.svg.png';
 import PhotoJavascript from '../../assets/Unofficial_JavaScript_logo_2.svg.png';
 import PhotoSASS from '../../assets/2560px-Sass_Logo_Color.svg.png';
 import React, { useState, useEffect, useRef } from 'react';
+import useScrollVisibility from '../scroll/scroll';
 
 function Skills() {
-  const [isVisible, setIsVisible] = useState(false);
-  const currentSectionRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const { top, bottom } = currentSectionRef.current.getBoundingClientRect();
-      const thresholdAppear = window.innerHeight * 0.5;
-      const thresholdDisappear = window.innerHeight * 0.5; // Adjust this value for disappearance
-
-      if (top < thresholdAppear && bottom > thresholdDisappear) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+  const thresholds = [window.innerHeight * 0.6, window.innerHeight * 0.5];
+  const [currentSectionRef, isVisible] = useScrollVisibility(thresholds);
+  
   return (
     <div
       id='skills'

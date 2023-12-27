@@ -1,5 +1,5 @@
-@import '../../../../SASS/utilities/variables.scss';
-@import '../../../../SASS/utilities/mixins.scss';
+@import './../../SASS/utilities/variables.scss';
+@import './../../SASS/utilities/mixins.scss';
 
 
   .stack-section {
@@ -7,10 +7,12 @@
     height: 100%;
     width: 100%;
     margin-top: 5rem;
+    background-color: aqua;
 
-    &__container2 {
-      @include spaceBetween;
-      width: 130px;
+    &__container {
+      @include centerRow;
+      gap: 5px;
+      width: 250px;
       height: 50px;
 
       &__img {

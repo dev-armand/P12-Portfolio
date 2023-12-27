@@ -13,6 +13,10 @@
   }
   &__container {
     @include centerColumn;
+  
+    &__link {
+      text-decoration: none;
+    }
 
     &__left-section {
       @include card;

@@ -1,3 +1,5 @@
+// This is the "Background video" for the application
+
 import React from "react"
 import blackhole from "../../assets/blackhole.mp4"
 import "./blackhole.scss"

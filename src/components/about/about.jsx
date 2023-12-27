@@ -1,29 +1,13 @@
+// This is the "About" section with a description of myself
+
 import './about.scss'
 import Photo from '../../assets/profilePic.jpg'
-import React, { useState, useEffect, useRef } from 'react';
+import useScrollVisibility from '../scroll/scroll';
 
 function About() {
-  const [isVisible, setIsVisible] = useState(false);
-  const currentSectionRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const { top, bottom } = currentSectionRef.current.getBoundingClientRect();
-      const thresholdAppear = window.innerHeight * 0.8;
-      const thresholdDisappear = window.innerHeight * 0.5; // Adjust this value for disappearance
-
-      if (top < thresholdAppear && bottom > thresholdDisappear) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const thresholds = [window.innerHeight * 0.6, window.innerHeight * 0.5];
+  const [currentSectionRef, isVisible] = useScrollVisibility(thresholds);
+  
   return(
     <div id='about' className={`about ${isVisible ? 'visible' : ''}`} ref={currentSectionRef}>
       <div className='about__section-container'>

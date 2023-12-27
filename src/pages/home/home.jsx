@@ -1,3 +1,5 @@
+// This the "Home page" it will contain every sections of this application
+
 import Footer from '../../components/footer/footer'
 import Header from '../../components/header/header'
 import FrontPage from '../../components/front-page/front-page'

@@ -1,3 +1,5 @@
+// This is the "Footer" for my application
+
 import './footer.scss'
 
 function Footer() {

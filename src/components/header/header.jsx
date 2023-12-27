@@ -1,3 +1,5 @@
+// This is the "Header" of this application
+
 import './header.scss'
 import VideoBackhole from '../video/blackhole'
 import { Link, animateScroll as scroll } from 'react-scroll';
@@ -18,13 +20,13 @@ function Header() {
       
       <div className='nav__left-section'>
         <div className='nav__left-section__name-container'>
-        <h2>Armand Bredean</h2>
+          <h2>Armand Bredean</h2>
         </div>
-       
+      
       </div>
       <div className='nav__center-section'>
         <div className='nav__center-section__navbar'>
-          <Link to='about' smooth={true} duration={500}  offset={-200}>About</Link>
+          <Link to='about' smooth={true} duration={500}  offset={-150}>About</Link>
           <Link to='skills' smooth={true} duration={500}  offset={-250}>Skills</Link>
           <Link to='projects' smooth={true} duration={500}  offset={-300}>Projects</Link>
           <Link to='contact' smooth={true} duration={500}  offset={-190}>Contact</Link>

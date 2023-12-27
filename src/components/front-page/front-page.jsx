@@ -1,31 +1,12 @@
+// This is the "Front-page" it will be the first section to be seen on this application
+
 import './front-page.scss'
 import { Link, animateScroll as scroll } from 'react-scroll';
-import React, { useState, useEffect, useRef } from 'react';
-
-
+import useScrollVisibility from '../scroll/scroll';
 
 function FrontPage() {
-  const [isVisible, setIsVisible] = useState(true);
-  const currentSectionRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const { top, bottom } = currentSectionRef.current.getBoundingClientRect();
-      const thresholdAppear = window.innerHeight * 0.5;
-      const thresholdDisappear = window.innerHeight * 0.5; // Adjust this value for disappearance
-
-      if (top < thresholdAppear && bottom > thresholdDisappear) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const thresholds = [window.innerHeight * 0.5, window.innerHeight * 0.5];
+  const [currentSectionRef, isVisible] = useScrollVisibility(thresholds);
 
   return(
     <div id='front-page' className={`front-page ${isVisible ? 'visible' : ''}`} ref={currentSectionRef}>
