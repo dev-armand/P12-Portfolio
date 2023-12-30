@@ -10,7 +10,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import useScrollVisibility from '../scroll/scroll';
 
 function Skills() {
-  const thresholds = [window.innerHeight * 0.6, window.innerHeight * 0.5];
+  const thresholds = [window.innerHeight * 0.5, window.innerHeight * 0.5];
   const [currentSectionRef, isVisible] = useScrollVisibility(thresholds);
   
   return (

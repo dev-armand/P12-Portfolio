@@ -3,11 +3,13 @@
 import GitHub from '../../assets/github-mark-white.png';
 import "./card.scss"
 
-function Card({ githubLink, image, title, text, icon1, icon2, icon3, icon4, icon5 }) {
+function Card({ appLink, githubLink, image, title, text, icon1, icon2, icon3, icon4, icon5 }) {
   return (
-    <a className='projects__container__link' href={githubLink} target="_blank" rel="noopener noreferrer">
-      <div className='projects__container__left-section'>
-        <img src={image} alt="img" className='projects__container__left-section__img' />
+    <div className='projects__link' >
+      <div className='projects__left-section'>
+        <a href={appLink} target="_blank" rel="noopener noreferrer">
+        <img src={image} alt="img" className='projects__left-section__img' />
+        </a>
         <h3>{title}</h3>
         <p>{text}</p>
         <div className='stack-section__container'>
@@ -21,7 +23,7 @@ function Card({ githubLink, image, title, text, icon1, icon2, icon3, icon4, icon
           <img src={GitHub} alt="icon github" className='gitHub' />
         </a>
       </div>
-    </a>
+    </div>
   );
 }
 

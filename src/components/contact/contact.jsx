@@ -1,53 +1,75 @@
-// This is the "Contact" section to send a message with your name and email
-
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './contact.scss';
 import useScrollVisibility from '../scroll/scroll';
+import { setInactive, setActive } from './contactActions';
+
 
 function Contact() {
   const thresholds = [window.innerHeight * 0.4, window.innerHeight * 0.5];
   const [currentSectionRef, isVisible] = useScrollVisibility(thresholds);
 
-  // glowing effect on click of the input
-  const [isActive, setIsActive] = useState({
-    name: false,
-    email: false,
-    message: false
-  });
+  const dispatch = useDispatch();
+  const isActive = useSelector((state) => state.contactReducer);
 
   const nameInputRef = useRef(null);
   const emailInputRef = useRef(null);
   const messageInputRef = useRef(null);
 
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+  
+  const formSpree = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('https://formspree.io/f/xdoqnlqv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+  
+      if (response.ok) {
+        console.log('Form submitted successfully!');
+        setFormData({ name: '', email: '', message: '' });
+
+        const successMessage = document.querySelector('.contact__success-message');
+        successMessage.classList.add('visible');
+        setTimeout(() => {
+          successMessage.classList.remove('visible');
+        }, 5000);
+
+      } else {
+        console.error('Form submission failed.');
+      }
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+    }
+  };
+
   const handleOutsideClick = (event) => {
-    if (
-      nameInputRef.current &&
-      !nameInputRef.current.contains(event.target)
-    ) {
-      setIsActive((prevState) => ({
-        ...prevState,
-        name: false
-      }));
+    if (!event.target.closest('.contact__form__name-input')) {
+      dispatch(setInactive('name'));
     }
 
-    if (
-      emailInputRef.current &&
-      !emailInputRef.current.contains(event.target)
-    ) {
-      setIsActive((prevState) => ({
-        ...prevState,
-        email: false
-      }));
+    if (!event.target.closest('.contact__form__email-input')) {
+      dispatch(setInactive('email'));
     }
 
-    if (
-      messageInputRef.current &&
-      !messageInputRef.current.contains(event.target)
-    ) {
-      setIsActive((prevState) => ({
-        ...prevState,
-        message: false
-      }));
+    if (!event.target.closest('.contact__form__message-text-area')) {
+      dispatch(setInactive('message'));
     }
   };
 
@@ -57,61 +79,64 @@ function Contact() {
     return () => {
       document.removeEventListener('click', handleOutsideClick);
     };
-  }, []);
+  }, [dispatch]);
 
-  const clearFields = () => {
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('message').value = '';
-  };
-
-
+  
   return (
-    <div id='contact' className={`contact ${isVisible ? 'visible' : ''}`} ref={currentSectionRef}>
+    <div id='contact' className={`contact ${isVisible ? 'visible' : ''}`} ref={currentSectionRef} >
       <h2>Contact</h2>
 
-      <form action="https://formspree.io/f/xdoqnlqv" method="POST" enctype="multipart/form-data" className='contact__form'>
-        <div className='contact__form__container name-email'>
-          <div className='contact__form__container'>
-            <label htmlFor="name" className='contact__form__name'>Name</label>
+      <form encType="multipart/form-data" className='contact__form'onSubmit={formSpree}>
+        <div className='contact__container name-email'>
+          <div className='contact__container'>
+            <label htmlFor="name" className='contact__name'>Name</label>
             <input
               type="text"
               name="name"
               required
               id="name"
-              className={`contact__form__name-input ${isActive.name ? 'active' : ''}`}
-              onClick={() => setIsActive((prevState) => ({ ...prevState, name: true }))}
+              className={`contact__name-input ${isActive.name ? 'active' : ''}`}
               ref={nameInputRef}
+              onClick={() => dispatch(setActive('name'))}
+              value={formData.name}
+              onChange={handleInputChange}
             />
           </div>
 
-          <div className='contact__form__container'>
-            <label htmlFor="email" className='contact__form__email'>Email</label>
+          <div className='contact__container'>
+            <label htmlFor="email" className='contact__email'>Email</label>
             <input
               type="email"
               name="email"
               required
               id="email"
-              className={`contact__form__email-input ${isActive.email ? 'active' : ''}`}
-              onClick={() => setIsActive((prevState) => ({ ...prevState, email: true }))}
+              className={`contact__email-input ${isActive.email ? 'active' : ''}`}
               ref={emailInputRef}
+              onClick={() => dispatch(setActive('email'))}
+              value={formData.email}
+              onChange={handleInputChange}
             />
           </div>
         </div>
 
-        <div className='contact__form__container message-submit'>
-          <label htmlFor="message" className='contact__form__message'>Message</label>
+        <div className='contact__container message-submit'>
+          <label htmlFor="message" className='contact__message'>Message</label>
           <textarea
             name="message"
             id="message"
             cols="30"
             rows="10"
-            className={`contact__form__message-text-area ${isActive.message ? 'active' : ''}`}
-            onClick={() => setIsActive((prevState) => ({ ...prevState, message: true }))}
+            className={`contact__message-text-area ${isActive.message ? 'active' : ''}`}
             ref={messageInputRef}
+            onClick={() => dispatch(setActive('message'))}
+            value={formData.message}
+            onChange={handleInputChange}
           ></textarea>
         </div>
-        <input type="submit" value="Submit" className='contact__form__submit'/>
+        <div className='contact__submit-container'>
+        <div className='contact__success-message contact__not-visible'>Message successfully send !</div>
+        <input type="submit" value="Submit" className='contact__submit'/>
+        </div>
       </form>
     </div>
   );

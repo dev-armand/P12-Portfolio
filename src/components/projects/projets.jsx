@@ -19,13 +19,14 @@ function Projects() {
 
   return(
     <div id='projects' className={`projects ${isVisible ? 'visible' : ''}`} ref={currentSectionRef}>
-      <h2 id='projects-title'> Projects</h2>
+      <h2 id='projects__title'> Projects</h2>
       <div className='projects__container'>
         <Card
+          appLink="https://p8-kasa-ogws.vercel.app/Home"
           githubLink="https://github.com/dev-armand/P8-Kasa"
           image= {Kasa} 
           title= "Kasa"
-          text= "Kasa is rental property app that I created with React and React Router"
+          text= "Kasa is rental property app that I created with React and React Router. Thie project contains a carousel and collapse bar component."
           icon1= {PhotoCSS}
           icon2= {PhotoHTML}
           icon3= {PhotoReact}
@@ -33,6 +34,7 @@ function Projects() {
           icon5= {PhotoSASS}
         />
         <Card
+          appLink="https://p6-sophie-bluel.vercel.app/"
           githubLink="https://github.com/dev-armand/P6-Sophie-Bluel"
           image= {Sophie} 
           title= "Sophie Bluel"
@@ -42,6 +44,7 @@ function Projects() {
           icon3= {PhotoReact}
         />
         <Card
+          appLink="https://dev-armand.github.io/P4-ohmyfood/"
           githubLink="https://github.com/dev-armand/P4-ohmyfood"
           image= {Ohmyfood} 
           title= "Ohmyfood"

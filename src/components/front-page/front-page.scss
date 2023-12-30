@@ -8,7 +8,6 @@
   font-family: $main-font;
   margin-top: 15rem;
   backdrop-filter: blur(5px);
-  // background-color: $secondary-color;
   @include animation;
   & h1 {
     font-size:50px ;

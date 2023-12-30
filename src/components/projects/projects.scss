@@ -13,23 +13,23 @@
   }
   &__container {
     @include centerColumn;
-  
-    &__link {
-      text-decoration: none;
-    }
+  }
+    
+  &__link {
+    text-decoration: none;
+  }
 
-    &__left-section {
-      @include card;
-      margin-top: 4rem
-    }
-    &__center-section {
-      @include card;
-      margin-top: 10rem
-    }
-    &__right-section {
-      @include card;
-      margin-top: 10rem
-    }
+  &__left-section {
+    @include card;
+    margin-top: 4rem
+  }
+  &__center-section {
+    @include card;
+    margin-top: 10rem
+  }
+  &__right-section {
+    @include card;
+    margin-top: 10rem
   }
 }
 
@@ -54,19 +54,18 @@
     &__container {
       @include centerRow;
       gap: 5rem;
+    }
+    
+    &__left-section {
+      margin-top: 3rem;
+    }
 
-      &__left-section {
-        margin-top: 3rem;
-      }
+    &__center-section {
+      margin-top: 3rem;
+    }
 
-      &__center-section {
-        margin-top: 3rem;
-      }
-
-      &__right-section {
-        margin-top: 3rem;
-      }
+    &__right-section {
+      margin-top: 3rem;
     }
   }
 }
-
