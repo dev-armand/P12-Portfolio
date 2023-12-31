@@ -1,16 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useRef, useState } from 'react';
 import './contact.scss';
 import useScrollVisibility from '../scroll/scroll';
-import { setInactive, setActive } from './contactActions';
 
 
 function Contact() {
   const thresholds = [window.innerHeight * 0.4, window.innerHeight * 0.5];
   const [currentSectionRef, isVisible] = useScrollVisibility(thresholds);
-
-  const dispatch = useDispatch();
-  const isActive = useSelector((state) => state.contactReducer);
 
   const nameInputRef = useRef(null);
   const emailInputRef = useRef(null);
@@ -47,9 +42,7 @@ function Contact() {
 
         const successMessage = document.querySelector('.contact__success-message');
         successMessage.classList.add('visible');
-        setTimeout(() => {
-          successMessage.classList.remove('visible');
-        }, 5000);
+        setTimeout(() => successMessage.classList.remove('visible'), 5000)
 
       } else {
         console.error('Form submission failed.');
@@ -59,29 +52,6 @@ function Contact() {
     }
   };
 
-  const handleOutsideClick = (event) => {
-    if (!event.target.closest('.contact__form__name-input')) {
-      dispatch(setInactive('name'));
-    }
-
-    if (!event.target.closest('.contact__form__email-input')) {
-      dispatch(setInactive('email'));
-    }
-
-    if (!event.target.closest('.contact__form__message-text-area')) {
-      dispatch(setInactive('message'));
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('click', handleOutsideClick);
-
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, [dispatch]);
-
-  
   return (
     <div id='contact' className={`contact ${isVisible ? 'visible' : ''}`} ref={currentSectionRef} >
       <h2>Contact</h2>
@@ -95,9 +65,8 @@ function Contact() {
               name="name"
               required
               id="name"
-              className={`contact__name-input ${isActive.name ? 'active' : ''}`}
-              ref={nameInputRef}
-              onClick={() => dispatch(setActive('name'))}
+              className="contact__name-input"
+              ref={nameInputRef}          
               value={formData.name}
               onChange={handleInputChange}
             />
@@ -110,9 +79,8 @@ function Contact() {
               name="email"
               required
               id="email"
-              className={`contact__email-input ${isActive.email ? 'active' : ''}`}
+              className="contact__email-input"
               ref={emailInputRef}
-              onClick={() => dispatch(setActive('email'))}
               value={formData.email}
               onChange={handleInputChange}
             />
@@ -126,9 +94,8 @@ function Contact() {
             id="message"
             cols="30"
             rows="10"
-            className={`contact__message-text-area ${isActive.message ? 'active' : ''}`}
+            className="contact__message-text-area"
             ref={messageInputRef}
-            onClick={() => dispatch(setActive('message'))}
             value={formData.message}
             onChange={handleInputChange}
           ></textarea>
