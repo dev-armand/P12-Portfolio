@@ -16,6 +16,7 @@
   color: white;
   font-size: 30px;
   text-shadow: rgb(240, 240, 240) 1px 0 10px;
+  margin-bottom: 3rem;
 }
 .contact__form {
   display: flex;
@@ -24,31 +25,31 @@
   flex-direction: column;
   height: 550px;
 }
-.contact__form__container {
+.contact__container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.contact__form__name {
+.contact__name {
   color: white;
   text-shadow: rgb(240, 240, 240) 1px 0 10px;
   font-size: 25px;
   margin-top: 2rem;
 }
-.contact__form__name-input {
+.contact__name-input {
   width: 250px;
   border: solid;
   border-width: 3px;
-  border-color: #5327c1;
+  border-color: #7927c1;
   border-radius: 5px;
   height: 2rem;
   font-size: 16px;
   margin-top: 5px;
-  background: #030014;
+  background: #110239;
   color: white;
 }
-.contact__form__name-input.active {
+.contact__name-input:focus {
   background-color: #030014;
   border: solid;
   border-width: 3px;
@@ -58,25 +59,25 @@
   color: rgb(240, 240, 240);
   cursor: pointer;
 }
-.contact__form__email {
+.contact__email {
   color: white;
   margin-top: 1rem;
   text-shadow: rgb(240, 240, 240) 1px 0 10px;
   font-size: 25px;
 }
-.contact__form__email-input {
+.contact__email-input {
   width: 250px;
   border: solid;
   border-width: 3px;
-  border-color: #5327c1;
+  border-color: #7927c1;
   border-radius: 5px;
   height: 2rem;
   font-size: 16px;
   margin-top: 5px;
-  background: #030014;
+  background: #110239;
   color: white;
 }
-.contact__form__email-input.active {
+.contact__email-input:focus {
   background-color: #030014;
   border: solid;
   border-width: 3px;
@@ -86,24 +87,24 @@
   color: rgb(240, 240, 240);
   cursor: pointer;
 }
-.contact__form__message {
+.contact__message {
   color: white;
   margin-top: 1rem;
   font-size: 25px;
   text-shadow: rgb(240, 240, 240) 1px 0 10px;
 }
-.contact__form__message-text-area {
+.contact__message-text-area {
   margin-top: 5px;
   width: 300px;
   border: solid;
   border-width: 3px;
-  border-color: #5327c1;
+  border-color: #7927c1;
   border-radius: 5px;
   font-size: 16px;
-  background: #030014;
+  background: #110239;
   color: white;
 }
-.contact__form__message-text-area.active {
+.contact__message-text-area:focus {
   background-color: #030014;
   border: solid;
   border-width: 3px;
@@ -113,7 +114,7 @@
   color: rgb(240, 240, 240);
   cursor: pointer;
 }
-.contact__form__submit {
+.contact__submit {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,23 +138,51 @@
   flex-direction: column;
   margin-top: 2rem;
 }
-.contact__form__submit:hover {
+.contact__submit:hover {
   color: rgb(240, 240, 240);
   cursor: pointer;
-  background: linear-gradient(#5327c1, white);
+  background: linear-gradient(#5327c1 10%, #7927c1);
+  text-shadow: 1px 0 20px #030014;
+}
+.contact__success-message {
+  border: solid;
+  border-width: 3px;
+  border-color: #7927c1;
+  border-radius: 5px;
+  height: 2rem;
+  font-size: 20px;
+  border-radius: 50px;
+  padding: 1rem;
+  background: #110239;
+  color: #0be4aa;
+  border-color: #0be4aa;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.contact .contact__success-message.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.contact__submit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
 }
 
 @media (min-width: 768px) {
   .contact h2 {
     font-size: 40px;
   }
-  .contact__form__name-input {
+  .contact__name-input {
     width: 300px;
   }
-  .contact__form__email-input {
+  .contact__email-input {
     width: 300px;
   }
-  .contact__form__message-text-area {
+  .contact__message-text-area {
     width: 450px;
   }
 }
@@ -176,23 +205,43 @@
     flex-direction: row;
     align-items: flex-start;
     margin-top: -4rem;
-    width: 135100% 0px;
+    width: 1350px;
   }
-  .contact__form__name {
+  .contact__name {
     margin-top: 1rem;
   }
-  .contact__form__message-text-area {
+  .contact__message-text-area {
     width: 600px;
     height: 180px;
   }
-  .contact__form .name-email {
+  .contact .name-email {
     margin-left: 5rem;
   }
-  .contact__form .message-submit {
+  .contact .message-submit {
     margin-left: 120px;
   }
-  .contact__form__submit {
-    margin-top: 7rem;
-    margin-left: 5rem;
+  .contact__submit {
+    margin-top: 1rem;
+  }
+  .contact__success-message {
+    border: solid;
+    border-width: 3px;
+    border-color: #7927c1;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 22px;
+    border-radius: 50px;
+    padding: 1rem;
+    background: #110239;
+    border-color: #0be4aa;
+  }
+  .contact__submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    margin-left: 3rem;
+    height: 200px;
   }
 }/*# sourceMappingURL=contact.css.map */

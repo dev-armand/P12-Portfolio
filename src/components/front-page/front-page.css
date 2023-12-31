@@ -7,7 +7,7 @@
   position: relative;
   z-index: 2;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-top: 20rem;
+  margin-top: 15rem;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   opacity: 0;
@@ -24,7 +24,7 @@
   margin: 1rem;
 }
 .front-page__title-span {
-  color: #5327c1;
+  color: #7927c1;
 }
 .front-page h2 {
   color: rgb(130, 127, 127);
@@ -60,7 +60,8 @@
 .front-page button:hover {
   color: rgb(240, 240, 240);
   cursor: pointer;
-  background: linear-gradient(#5327c1, white);
+  background: linear-gradient(#5327c1 10%, #7927c1);
+  text-shadow: 1px 0 20px #030014;
 }
 
 @media (min-width: 768px) {

@@ -8,7 +8,7 @@
   margin-top: -20rem;
   margin-left: -8px;
   background: linear-gradient(#030014, #5327c1);
-  height: 100%;
+  height: 120%;
   width: 100%;
   z-index: 10;
   gap: 9px;
@@ -61,6 +61,7 @@
 }
 @media (min-width: 1024px) {
   .loader {
-    margin-top: -15rem;
+    margin-top: -17rem;
+    height: 100%;
   }
 }/*# sourceMappingURL=loader.css.map */

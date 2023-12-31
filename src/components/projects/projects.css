@@ -24,23 +24,26 @@
   align-items: center;
   flex-direction: column;
 }
-.projects__container__left-section {
+.projects__link {
+  text-decoration: none;
+}
+.projects__left-section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 5px;
-  height: 530px;
+  height: 580px;
   width: 300px;
   border: solid;
   border-width: 3px;
-  border-color: #5327c1;
-  background-color: #030014;
+  border-color: #7927c1;
+  background-color: #110239;
   position: relative;
   margin-top: 4rem;
 }
-.projects__container__left-section:hover {
+.projects__left-section:hover {
   background-color: #030014;
   border: solid;
   border-width: 3px;
@@ -50,7 +53,7 @@
   color: rgb(240, 240, 240);
   cursor: pointer;
 }
-.projects__container__left-section__img {
+.projects__left-section__img {
   height: 270px;
   width: 300px;
   -o-object-fit: cover;
@@ -58,17 +61,18 @@
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
-.projects__container__left-section h3 {
+.projects__left-section h3 {
   color: white;
   font-size: 22px;
   margin-bottom: 0;
 }
-.projects__container__left-section p {
+.projects__left-section p {
   color: white;
   margin-left: 1rem;
   margin-right: 1rem;
+  font-size: 18px;
 }
-.projects__container__left-section .gitHub {
+.projects__left-section .gitHub {
   height: 30px;
   width: 30px;
   margin: 1rem;
@@ -78,7 +82,7 @@
   bottom: -10px;
   left: 120px;
 }
-.projects__container__left-section .gitHub:hover {
+.projects__left-section .gitHub:hover {
   background-color: #030014;
   border: solid;
   border-width: 3px;
@@ -88,23 +92,26 @@
   color: rgb(240, 240, 240);
   cursor: pointer;
 }
-.projects__container__center-section {
+.projects__left-section:hover {
+  background-color: #110239;
+}
+.projects__center-section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 5px;
-  height: 530px;
+  height: 580px;
   width: 300px;
   border: solid;
   border-width: 3px;
-  border-color: #5327c1;
-  background-color: #030014;
+  border-color: #7927c1;
+  background-color: #110239;
   position: relative;
   margin-top: 10rem;
 }
-.projects__container__center-section:hover {
+.projects__center-section:hover {
   background-color: #030014;
   border: solid;
   border-width: 3px;
@@ -114,7 +121,7 @@
   color: rgb(240, 240, 240);
   cursor: pointer;
 }
-.projects__container__center-section__img {
+.projects__center-section__img {
   height: 270px;
   width: 300px;
   -o-object-fit: cover;
@@ -122,17 +129,18 @@
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
-.projects__container__center-section h3 {
+.projects__center-section h3 {
   color: white;
   font-size: 22px;
   margin-bottom: 0;
 }
-.projects__container__center-section p {
+.projects__center-section p {
   color: white;
   margin-left: 1rem;
   margin-right: 1rem;
+  font-size: 18px;
 }
-.projects__container__center-section .gitHub {
+.projects__center-section .gitHub {
   height: 30px;
   width: 30px;
   margin: 1rem;
@@ -142,7 +150,7 @@
   bottom: -10px;
   left: 120px;
 }
-.projects__container__center-section .gitHub:hover {
+.projects__center-section .gitHub:hover {
   background-color: #030014;
   border: solid;
   border-width: 3px;
@@ -152,23 +160,26 @@
   color: rgb(240, 240, 240);
   cursor: pointer;
 }
-.projects__container__right-section {
+.projects__center-section:hover {
+  background-color: #110239;
+}
+.projects__right-section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 5px;
-  height: 530px;
+  height: 580px;
   width: 300px;
   border: solid;
   border-width: 3px;
-  border-color: #5327c1;
-  background-color: #030014;
+  border-color: #7927c1;
+  background-color: #110239;
   position: relative;
   margin-top: 10rem;
 }
-.projects__container__right-section:hover {
+.projects__right-section:hover {
   background-color: #030014;
   border: solid;
   border-width: 3px;
@@ -178,7 +189,7 @@
   color: rgb(240, 240, 240);
   cursor: pointer;
 }
-.projects__container__right-section__img {
+.projects__right-section__img {
   height: 270px;
   width: 300px;
   -o-object-fit: cover;
@@ -186,17 +197,18 @@
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
-.projects__container__right-section h3 {
+.projects__right-section h3 {
   color: white;
   font-size: 22px;
   margin-bottom: 0;
 }
-.projects__container__right-section p {
+.projects__right-section p {
   color: white;
   margin-left: 1rem;
   margin-right: 1rem;
+  font-size: 18px;
 }
-.projects__container__right-section .gitHub {
+.projects__right-section .gitHub {
   height: 30px;
   width: 30px;
   margin: 1rem;
@@ -206,7 +218,7 @@
   bottom: -10px;
   left: 120px;
 }
-.projects__container__right-section .gitHub:hover {
+.projects__right-section .gitHub:hover {
   background-color: #030014;
   border: solid;
   border-width: 3px;
@@ -215,6 +227,9 @@
   box-shadow: 1px 1px 10px 10px #5327c1;
   color: rgb(240, 240, 240);
   cursor: pointer;
+}
+.projects__right-section:hover {
+  background-color: #110239;
 }
 
 @media (min-width: 768px) {
@@ -239,13 +254,13 @@
     flex-direction: row;
     gap: 5rem;
   }
-  .projects__container__left-section {
+  .projects__left-section {
     margin-top: 3rem;
   }
-  .projects__container__center-section {
+  .projects__center-section {
     margin-top: 3rem;
   }
-  .projects__container__right-section {
+  .projects__right-section {
     margin-top: 3rem;
   }
 }/*# sourceMappingURL=projects.css.map */
