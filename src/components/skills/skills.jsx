@@ -6,7 +6,6 @@ import PhotoHTML from '../../assets/HTML5_logo_and_wordmark.svg.png';
 import PhotoReact from '../../assets/React-icon.svg.png';
 import PhotoJavascript from '../../assets/Unofficial_JavaScript_logo_2.svg.png';
 import PhotoSASS from '../../assets/2560px-Sass_Logo_Color.svg.png';
-import React, { useState, useEffect, useRef } from 'react';
 import useScrollVisibility from '../scroll/scroll';
 
 function Skills() {

@@ -1,7 +1,8 @@
 
-@import "../sass/utilities/mixins";
-@import "../sass/utilities/variables";
-@import "../sass/base/typography";
+
+@import "./utilities/variables";
+@import "./utilities/mixins";
+@import "./base/typography";
 @import "../components/scrollbar/scrollbar.scss";
 @import "../components/about/about.scss";
 @import "../components/card/card.scss";
