@@ -1,6 +1,6 @@
 // This is the "Skills section" it will show the differents technologies that I use
 
-import './skills.scss';
+import './_skills.scss';
 import PhotoCSS from '../../assets/CSS3_logo_and_wordmark.svg.png';
 import PhotoHTML from '../../assets/HTML5_logo_and_wordmark.svg.png';
 import PhotoReact from '../../assets/React-icon.svg.png';

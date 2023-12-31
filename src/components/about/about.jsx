@@ -1,6 +1,6 @@
 // This is the "About" section with a description of myself
 
-import './about.scss'
+import './_about.scss'
 import Photo from '../../assets/profilePic.jpg'
 import useScrollVisibility from '../scroll/scroll';
 

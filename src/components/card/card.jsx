@@ -1,7 +1,7 @@
 // This is the card component for my projects
 
 import GitHub from '../../assets/github-mark-white.png';
-import "./card.scss"
+import "./_card.scss"
 
 function Card({ appLink, githubLink, image, title, text, icon1, icon2, icon3, icon4, icon5 }) {
   return (

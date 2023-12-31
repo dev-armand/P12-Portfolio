@@ -1,6 +1,6 @@
 // This is the "Footer" for my application
 
-import './footer.scss'
+import './_footer.scss'
 
 function Footer() {
   return(

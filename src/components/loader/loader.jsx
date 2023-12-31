@@ -1,6 +1,6 @@
 // This is the "Loader" it is what we wil see while the application load
 
-import './loader.scss'
+import './_loader.scss'
 
 function Loader() {
   return(

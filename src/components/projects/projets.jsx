@@ -1,6 +1,6 @@
 // This is the "Project" section, it will contains the project cards
 
-import './projects.scss'
+import './_projects.scss'
 import Kasa from '../../assets/kasa.png'
 import Sophie from '../../assets/sophiebluel.png'
 import Ohmyfood from '../../assets/ohmyfood.png'

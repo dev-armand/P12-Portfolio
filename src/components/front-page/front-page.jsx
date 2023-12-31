@@ -1,6 +1,6 @@
 // This is the "Front-page" it will be the first section to be seen on this application
 
-import './front-page.scss'
+import './_front-page.scss'
 import { Link, animateScroll as scroll } from 'react-scroll';
 import useScrollVisibility from '../scroll/scroll';
 

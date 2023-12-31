@@ -8,7 +8,7 @@ import Skills from '../../components/skills/skills'
 import Projects from '../../components/projects/projets'
 import Contact from '../../components/contact/contact'
 import Loader from '../../components/loader/loader'
-import './home.scss'
+import './_home.scss'
 
 function Home() {
   return(

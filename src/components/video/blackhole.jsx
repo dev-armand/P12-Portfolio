@@ -2,7 +2,7 @@
 
 import React from "react"
 import blackhole from "../../assets/blackhole.mp4"
-import "./blackhole.scss"
+import "./_blackhole.scss"
 
 function VideoBackhole() {
   return(

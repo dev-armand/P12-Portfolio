@@ -1,6 +1,6 @@
 // This is the "Error 404 page"
 
-import './error.scss'
+import './_error.scss'
 import Footer from '../../components/footer/footer'
 import Header from '../../components/header/header'
 

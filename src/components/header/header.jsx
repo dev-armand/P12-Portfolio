@@ -1,6 +1,6 @@
 // This is the "Header" of this application
 
-import './header.scss'
+import './_header.scss'
 import VideoBackhole from '../video/blackhole'
 import { Link, animateScroll as scroll } from 'react-scroll';
 import HomeIcon from '../../assets/homeicon.png'

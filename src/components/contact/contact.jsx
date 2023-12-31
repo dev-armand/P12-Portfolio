@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './contact.scss';
+import './_contact.scss';
 import useScrollVisibility from '../scroll/scroll';
 
 
