@@ -6,7 +6,7 @@
 .loader {
   @include centerRow;
     position: fixed;
-    margin-top: -20rem;
+    margin-top: -15rem;
     margin-left: -8px;
     
     background: linear-gradient($secondary-color, $main-color);
@@ -46,7 +46,7 @@
 
 @include forDesktop {
   .loader {
-    margin-top: -17rem;
+    margin-top: -14.6rem;
     height: 100%;
   }
 }

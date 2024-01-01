@@ -788,7 +788,7 @@
   align-items: center;
   flex-direction: row;
   position: fixed;
-  margin-top: -20rem;
+  margin-top: -15rem;
   margin-left: -8px;
   background: linear-gradient(#030014, #5327c1);
   height: 120%;
@@ -844,7 +844,7 @@
 }
 @media (min-width: 1024px) {
   .loader {
-    margin-top: -17rem;
+    margin-top: -14.6rem;
     height: 100%;
   }
 }
