@@ -558,7 +558,9 @@
   border-color: white;
   text-shadow: rgb(240, 240, 240) 1px 0 10px;
   box-shadow: 1px 1px 10px 10px #5327c1;
-  width: 320px;
+  width: 310px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .nav__navbar a {
   margin-left: 1rem;
