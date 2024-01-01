@@ -8,7 +8,7 @@
   z-index: 2;
   font-family: $main-font;
   margin-top: 15rem;
-  backdrop-filter: blur(5px);
+  // backdrop-filter: blur(5px);
   @include animation;
   & h1 {
     font-size:50px ;
