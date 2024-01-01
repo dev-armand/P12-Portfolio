@@ -48,7 +48,7 @@
         color: $tertiary-color;
         cursor: pointer;
         padding-bottom: 5px;
-        font-size: 22px
+        font-size: 18px
       }
     }
   }
@@ -116,6 +116,9 @@
         font-size: 22px;
         margin-left: 2rem;
         margin-right: 2rem;
+        &:hover {
+          font-size: 24px
+        }
       }
     }
   }

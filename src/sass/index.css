@@ -462,6 +462,7 @@
   font-size: 30px;
   color: white;
   margin-top: 4rem;
+  font-weight: bold;
 }
 .front-page button:hover {
   color: rgb(240, 240, 240);
@@ -571,7 +572,7 @@
   color: rgb(240, 240, 240);
   cursor: pointer;
   padding-bottom: 5px;
-  font-size: 22px;
+  font-size: 18px;
 }
 .nav__home-icon {
   position: absolute;
@@ -651,6 +652,9 @@
     font-size: 22px;
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+  .nav__navbar a:hover {
+    font-size: 24px;
   }
 }
 @media (min-width: 1024px) {
