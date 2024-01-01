@@ -183,7 +183,7 @@
   color: white;
   text-shadow: rgb(240, 240, 240) 1px 0 10px;
   font-size: 25px;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .contact__name-input {
   width: 250px;
@@ -343,7 +343,7 @@
   }
   .contact h2 {
     font-size: 80px;
-    margin-left: 5rem;
+    margin-left: 2rem;
     margin-top: 1rem;
   }
   .contact__form {
@@ -356,7 +356,7 @@
     width: 1350px;
   }
   .contact__name {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   .contact__message-text-area {
     width: 600px;
@@ -502,7 +502,7 @@
     display: flex;
     align-items: flex-start;
     margin-left: 5rem;
-    margin-top: 15rem;
+    margin-top: 13rem;
   }
   .front-page h1 {
     font-size: 80px;
