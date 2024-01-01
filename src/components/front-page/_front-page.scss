@@ -7,7 +7,7 @@
   position: relative;
   z-index: 2;
   font-family: $main-font;
-  margin-top: 15rem;
+  margin-top: 10rem;
   // backdrop-filter: blur(5px);
   @include animation;
   & h1 {
@@ -27,13 +27,13 @@
   }
   & h3 {
     color: $white;
-    margin-top: 4rem;
+    margin-top: 2rem;
     font-size: 22px
   }
 
   & button {
     @include Bigbutton;
-    margin-top: 4rem;
+    margin-top: 2rem;
     font-weight: bold;
   }
 }

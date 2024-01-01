@@ -415,7 +415,7 @@
   position: relative;
   z-index: 2;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-top: 15rem;
+  margin-top: 10rem;
   opacity: 0;
   transform: translateX(-100%);
   transition: opacity 1s ease, transform 1s ease;
@@ -440,7 +440,7 @@
 }
 .front-page h3 {
   color: white;
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-size: 22px;
 }
 .front-page button {
@@ -461,7 +461,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 30px;
   color: white;
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-weight: bold;
 }
 .front-page button:hover {
