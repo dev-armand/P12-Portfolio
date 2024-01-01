@@ -550,6 +550,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  margin-right: 8px;
   height: 3rem;
   border-radius: 30px;
   background-color: #030014;
@@ -558,13 +559,13 @@
   border-color: white;
   text-shadow: rgb(240, 240, 240) 1px 0 10px;
   box-shadow: 1px 1px 10px 10px #5327c1;
-  width: 360px;
+  width: 320px;
 }
 .nav__navbar a {
   margin-left: 1rem;
   margin-right: 1rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   font-weight: bold;
 }
@@ -576,7 +577,7 @@
 }
 .nav__home-icon {
   position: absolute;
-  left: 129px;
+  left: 109px;
   top: 39px;
   display: flex;
   justify-content: center;
@@ -1217,7 +1218,8 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  top: -360px;
+  top: -290px;
+  left: -5px;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;

@@ -27,6 +27,7 @@
 
   &__navbar {
     @include spaceBetween;
+    margin-right: 8px;
     height: 3rem;
     border-radius: 30px;
     background-color: $secondary-color;
@@ -35,12 +36,12 @@
     border-color: $white;
     text-shadow: $tertiary-color 1px 0 10px;
     box-shadow: 1px 1px 10px 10px $main-color;
-    width: 360px;
+    width: 320px;
     & a {
       margin-left: 1rem;
       margin-right: 1rem;
       font-family: $main-font;
-      font-size: 18px;
+      font-size: 16px;
       color: $white;
       font-weight: bold;
       &:hover {
@@ -54,7 +55,7 @@
   
   &__home-icon {
     position: absolute;
-    left: 129px;
+    left: 109px;
     top: 39px;
     @include icon;
     width: 25px;
