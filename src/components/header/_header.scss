@@ -90,7 +90,7 @@
 @include forLargeMobile {
   .nav {
     &__home-icon {
-      left: 140px;
+      left: 155px;
     }
 
     &__navbar {
@@ -105,10 +105,11 @@
   }
 }
 
+
 @include forTablet {
   .nav {
     &__home-icon {
-      left: 200px;
+      left: 210px;
     }
 
     &__navbar {
