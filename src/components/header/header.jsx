@@ -30,7 +30,7 @@ function Header() {
             <Link to='projects' smooth={true} duration={500}  offset={-300}>Projects</Link>
             <Link to='contact' smooth={true} duration={500}  offset={-190}>Contact</Link>
           </div>
-            <Link to='top' smooth={true} duration={500}>
+            <Link to='nav' smooth={true} duration={500}>
               <img src={HomeIcon} alt="home" className='nav__home-icon' onClick={scrollToTop} />
             </Link>
         </div>

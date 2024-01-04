@@ -40,7 +40,7 @@ function Projects() {
           text= "For her Portfolio I had to create a Login function that handles user input (email and password), sends it to a server-side API for authentication. Once connected she can add or delete a project."
           icon1= {PhotoCSS}
           icon2= {PhotoHTML}
-          icon3= {PhotoReact}
+          icon4= {PhotoJavascript}
         />
         <Card
           appLink="https://dev-armand.github.io/P4-ohmyfood/"
