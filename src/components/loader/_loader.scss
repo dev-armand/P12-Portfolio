@@ -1,8 +1,8 @@
+// This is the "loader animation"
+
 @import '../../sass/utilities/variables.scss';
 @import '../../sass/utilities/mixins.scss';
 
-
-/****************************  LOADER ANIMATION */
 .loader {
   @include centerRow;
     position: fixed;

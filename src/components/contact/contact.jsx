@@ -101,7 +101,7 @@ function Contact() {
           ></textarea>
         </div>
         <div className='contact__submit-container'>
-        <div className='contact__success-message contact__not-visible'>Message successfully send !</div>
+        <div className='contact__success-message contact__not-visible'>Message successfully sent !</div>
         <input type="submit" value="Submit" className='contact__submit'/>
         </div>
       </form>

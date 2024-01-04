@@ -6,7 +6,6 @@ const useScrollVisibility = (thresholds) => {
   const [isVisible, setIsVisible] = useState(true);
   const currentSectionRef = useRef(null);
 
-  
   useEffect(() => {
     const handleScroll = () => {
       const { top, bottom } = currentSectionRef.current.getBoundingClientRect();

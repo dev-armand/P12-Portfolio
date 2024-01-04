@@ -5,7 +5,7 @@
 
 .contact {
   @include centerColumn;
-  height:700px;
+  height:715px;
   @include animation;
 
   & h2 {
@@ -119,7 +119,7 @@
 
 @include forTablet {
   .contact {
-
+    height:715px
     & h2 {
       font-size: 40px;
     }
@@ -180,7 +180,7 @@
       }
       &__success-message {
         @include border;
-        width: 250px;
+        width: 275px;
         font-size: 22px;
         border-radius: 50px;
         padding: 1rem;

@@ -12,7 +12,6 @@ import PhotoReact from '../../assets/React-icon.svg.png'
 import PhotoJavascript from '../../assets/Unofficial_JavaScript_logo_2.svg.png'
 import PhotoSASS from '../../assets/2560px-Sass_Logo_Color.svg.png'
 
-
 function Projects() {
   const thresholds = [window.innerHeight * 0.6, window.innerHeight * 0.4];
   const [currentSectionRef, isVisible] = useScrollVisibility(thresholds);
@@ -48,7 +47,7 @@ function Projects() {
           githubLink="https://github.com/dev-armand/P4-ohmyfood"
           image= {Ohmyfood} 
           title= "Ohmyfood"
-          text= "I had to create a food menu completely responsive for all devices and I started with mobile first. I also added a loader and some CSS animations for choosing a menu and the like button."
+          text= "I had to create a food menu completely responsive for all devices and I started with mobile first. I made a loader and some CSS animations for choosing a menu and the like button."
           icon1= {PhotoCSS}
           icon2= {PhotoHTML}
         />

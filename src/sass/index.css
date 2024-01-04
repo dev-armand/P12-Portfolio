@@ -116,7 +116,6 @@
   .about__right-section {
     margin-top: 8rem;
     margin-right: 10rem;
-    height: 300px;
     width: 1400px;
   }
 }
@@ -376,7 +375,7 @@
     border-width: 3px;
     border-color: #7927c1;
     border-radius: 5px;
-    width: 250px;
+    width: 275px;
     font-size: 22px;
     border-radius: 50px;
     padding: 1rem;
