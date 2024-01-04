@@ -19,7 +19,7 @@ function About() {
           <p>Hello! My name is <span  className='about__span'>Armand</span> I am 26 years old and I am from France.</p>
           <p>
           My interest for web developement started when I wanted know how to create a website and the best way to understand it is by creating one! I went on youtube and I started with some tutorial for HTML, CSS and Javascript and after watching a couples videos it was clear to me, I will become a frontend web developer. 
-          Shorly after I applied for an online web developer school.
+          Shorly after I applied for an online web developer school (Openclassrooms).
           </p>
           <p>Then on my journey begins...</p>
         </div>
