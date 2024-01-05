@@ -1,0 +1,15 @@
+@import '../../sass/utilities/variables.scss';
+@import '../../sass/utilities/mixins.scss';
+
+.legal {
+  margin-top: 3rem;
+  margin-left: 4rem;
+  max-width: 600px;
+  @include centerColumn;
+  line-height: 1.5;
+  font-weight: 300;
+
+  & h3, h2 {
+    text-decoration: underline;
+  }
+}
