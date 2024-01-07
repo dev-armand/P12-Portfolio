@@ -15,23 +15,20 @@ function About() {
           <p className='about__name'>Armand Bredean</p>
           <img className='about__profile-pic' src={Photo} alt="profile pic" />
         </div>
-        <div className='about__right-section'>
-         
+        <div className='about__right-section'>       
           <p className='about__subtitle'>My name is Armand I am 26 years old and I am from 
-          <span  className='about__span-fr'> FR</span>
-          <span  className='about__span-an'>AN</span>
-          <span  className='about__span-ce'>CE</span>
+            <span  className='about__span-fr'> FR</span>
+            <span  className='about__span-an'>AN</span>
+            <span  className='about__span-ce'>CE</span>
           .</p>
-         <br />
+          <br />
           <span  className='about__span'>In 2023,</span>
           <p>
             I was curious about how can I make a website and I went on youtube to found out. I watch some tutorials about HTML, CSS to recreate the youtube home page, with javascript I made a "to do" list and then I created a portfolio. Shortly after I applied for an online web developer school "Openclassrooms".
           </p>
-          
           <span  className='about__span'>In 2024,</span>
-          <p>
-          
-I graduated from "Openclassrooms" (web developer school) were I have built 12 projects and this is some of the things I have learned from building those projects:
+          <p>         
+            I graduated from "Openclassrooms" (web developer school) were I have built 12 projects and this is some of the things I have learned from building those projects:
           </p>
           <br />
           <p className='about__list-title'><span  className='about__span'>HTML and CSS </span>to create basic websites:</p>
@@ -42,7 +39,6 @@ I graduated from "Openclassrooms" (web developer school) were I have built 12 pr
             <li>media queries (mobile, tablet, desktop)</li>
             <li>CSS animation (use of keyframes)</li>
           </ul>
-
           <p className='about__list-title'><span  className='about__span'>Javascript </span> for a dynamic website:</p>
           <ul className='about__list'>
             <li>making API calls (get, post, put, patch, delete)</li>
@@ -74,7 +70,6 @@ I graduated from "Openclassrooms" (web developer school) were I have built 12 pr
             <li>Unit test</li>
           </ul>
           <br />
-          
         </div>
       </div>
     </div>

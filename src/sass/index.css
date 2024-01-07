@@ -361,7 +361,7 @@
 @media (min-width: 1024px) {
   .contact {
     align-items: flex-start;
-    margin-left: 2rem;
+    margin-left: 4rem;
     height: 360px;
     width: 1200px;
   }
