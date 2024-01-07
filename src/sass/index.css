@@ -75,7 +75,7 @@
   margin-right: 3rem;
   font-size: 20px;
   background-color: #110239;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 5px;
   border: solid;
   border-width: 3px;
@@ -83,10 +83,28 @@
   color: white;
   line-height: 1.4;
 }
+.about__subtitle {
+  font-size: 28px;
+}
 .about__span {
   color: #7927c1;
   font-size: 22px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.about__span-fr {
+  color: #0b1de4;
+}
+.about__span-an {
+  color: white;
+}
+.about__span-ce {
+  color: #e40b2f;
+}
+.about__list-title {
+  margin-bottom: 0;
+}
+.about__list {
+  margin-top: 0;
 }
 
 @media (min-width: 768px) {
@@ -100,9 +118,9 @@
   }
   .about__section-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
   }
   .about__profile-pic {
     height: 400px;
@@ -117,6 +135,12 @@
     margin-top: 8rem;
     margin-right: 10rem;
     width: 1400px;
+  }
+  .about__left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 .stack-section {
