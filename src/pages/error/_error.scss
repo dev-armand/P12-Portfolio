@@ -1,0 +1,23 @@
+@import '../../sass/utilities/variables.scss';
+@import '../../sass/utilities/mixins.scss';
+
+.error {
+  @include centerColumn;
+
+  &__card {
+    margin-top: 14rem;
+    background-color:$main-color ;
+    width: 320px;
+    height: 230px;
+    @include centerColumn;
+    @include glow-effect;
+    background: linear-gradient($main-color 10%, $light-purple);
+
+    & h1 {
+      font-size: 50px;
+    }
+    & h2 {
+      margin-bottom: 3rem;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+// This is the style for the scrollbar
+
+@import '../../sass/utilities/variables.scss';
+@import '../../sass/utilities/mixins.scss';
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:$secondary-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $dark-grey;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $grey;
+}
